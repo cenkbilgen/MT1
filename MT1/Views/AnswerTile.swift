@@ -13,7 +13,7 @@ struct AnswerTile: View {
     let text: String
 
     var body: some View {
-        RoundedRectangle(cornerRadius: 5)
+        Rectangle()
     }
     
 }

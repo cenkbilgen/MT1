@@ -20,7 +20,8 @@ struct TriviaService {
         guard let url = components?.url else {
             throw URLError(.badURL)
         }
-        let request = URLRequest(url: url)
+        var request = URLRequest(url: url)
+        // request.addValue("YOUR_KEY", forHTTPHeaderField: "X-api-key")
 
         let (data, response) = try await URLSession.shared.data(for: request)
         print(String(data: data, encoding: .utf8) ?? "no data")
